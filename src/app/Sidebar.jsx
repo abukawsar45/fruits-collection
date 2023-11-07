@@ -3,7 +3,7 @@ import { BiHomeSmile } from 'react-icons/bi';
 import { LuLayoutGrid } from 'react-icons/lu';
 import { PiTelegramLogoLight } from 'react-icons/pi';
 import { CgMoreO, CgPlayButtonR } from 'react-icons/cg';
-import ActiveLink from './utils/ActiveLink';
+import ActiveLink from '../utils/ActiveLink';
 
 const Sidebar = () => {
   return (
