@@ -15,14 +15,16 @@ export default function RootLayout({ children }) {
      <html lang='en'>
        <body className='relative lg:mx-auto max-w-[1920px]'>
          <div className='fixed h-14 md:h-[60px] w-full max-w-[1920px] '>
-         <Header/>
+           <Header />
          </div>
 
          <div className='flex flex-col md:flex-row'>
            <div className='fixed bottom-0 md:bottom-auto w-full md:w-[70px] md:mt-[60px] order-2 md:order-1'>
              <Sidebar />
            </div>
-           <div className='bg-yellow-300 w-full md:ml-[70px] mt-[60px] md:order-2 h-[1900px]'>
+           <div
+             className='bg-[#EEF0F2] w-full md:ml-[70px] mt-[60px] md:order-2 h-[1900px] rounded-tl-3xl'
+           >
              {children}
            </div>
          </div>

@@ -14,7 +14,7 @@ const ActiveLink = ({ href, children, className }) => {
       href={href}
       className={`${
         isActive
-          ? 'text-red-500 bg-orange-100 border-2 border-red-200'
+          ? 'active-button border-2 border-red-200'
           : 'bg-slate-100'
       }  ${className}`}
     >

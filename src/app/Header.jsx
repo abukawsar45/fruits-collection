@@ -14,14 +14,14 @@ const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isShowMenu, setIsShowMenu] = useState(false);
 
-  console.log({isDarkToggled, isSwitchToggled, isOpenMenu})
+  console.log({isDarkToggled, isSwitchToggled, isOpenMenu, isShowMenu})
 
   const navData = (
     <>
       <div className='flex flex-col md:flex-row justify-end items-center gap-2 md:gap-4 lg:gap-6'>
         <button
           className={` p-[6px] transition-transform duration-100 border-2  rounded-lg ${
-            isDarkToggled ? '' : 'text-red-500 bg-orange-200 border-red-200'
+            isDarkToggled ? '' : 'active-button border-red-200'
           }`}
           onClick={() => setIsDarkToggled(!isDarkToggled)}
         >
@@ -35,7 +35,7 @@ const Header = () => {
         </button>
         <button
           className={` p-[6px] transition-transform duration-100 border-2  rounded-lg ${
-            !isSwitchToggled ? 'text-red-500 bg-orange-200 border-red-200' : ''
+            !isSwitchToggled ? 'active-button border-red-200' : ''
           }`}
           onClick={() => setIsSwitchToggled(!isSwitchToggled)}
         >
@@ -49,7 +49,7 @@ const Header = () => {
         </button>
         <button
           className={`hidden md:block p-[6px] transition-transform duration-100 border-2  rounded-lg ${
-            isOpenMenu ? 'text-red-500 bg-orange-200 border-red-200' : ''
+            isOpenMenu ? 'active-button border-red-200' : ''
           }`}
           onClick={() => setIsOpenMenu(!isOpenMenu)}
         >
@@ -73,7 +73,7 @@ const Header = () => {
             placeholder='Search Best Food'
             className='  rounded-lg h-8 md:h-10  px-4 text-black  border-2 border-slate-100 hover:border-green-400 hover:transition w-full'
           />
-          <button className='absolute right-0 text-red-500 bg-orange-100 border-1 border-red-200 rounded-md m-1'>
+          <button className='absolute right-0 active-button border-1 border-red-200 rounded-md m-1'>
             <GoSearch className='text-2xl md:text-3xl p-1 rounded' />
           </button>
         </div>
