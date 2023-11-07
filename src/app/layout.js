@@ -1,10 +1,7 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Sidebar from '@/shared/Sidebar';
-import Image from 'next/image';
-import logo from '../assets/logo.png'
-// import Sidebar from '../shared/Sidebar';
-// import Header from '../shared/Header';
+import Sidebar from './Sidebar';
+import Header from './Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -17,18 +14,8 @@ export default function RootLayout({ children }) {
    return (
      <html lang='en'>
        <body className='relative lg:mx-auto max-w-[1920px]'>
-         <div className='bg-green-500 fixed w-full h-[60px] max-w-[1920px] '>
-           <div className='py-12 grid grid-cols-12 '>
-             <div className='col-span-5'>
-               <Image className='py' src={logo} alt='logo' />
-             </div>
-             <div className='col-span-2'>
-               <Image className='py' src={logo} alt='logo' />
-             </div>
-             <div className='col-span-5'>
-               <Image className='py' src={logo} alt='logo' />
-             </div>
-           </div>
+         <div className='bg-green-500 fixed w-full max-w-[1920px] '>
+         <Header/>
          </div>
 
          <div className='flex flex-col md:flex-row'>
