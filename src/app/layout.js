@@ -1,7 +1,10 @@
 import { Inter } from 'next/font/google';
 import './globals.css';
-import Sidebar from '../shared/Sidebar';
-import Header from '../shared/Header';
+import Sidebar from '@/shared/Sidebar';
+import Image from 'next/image';
+import logo from '../assets/logo.png'
+// import Sidebar from '../shared/Sidebar';
+// import Header from '../shared/Header';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -11,25 +14,32 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
-  return (
-    <html lang='en'>
-      <body className='lg:mx-auto max-w-[1920px]'>
-        <div className='relative '>
-          <div className='fixed -top-auto '>
-            <Header />
-          </div>
-          <div className=' '>
-            <div className='flex flex-col md:flex-row'>
-              <div className='fixed flex items-center justify-center bottom-0 md:bottom-auto w-full md:w-[70px] md:mt-[60px] order-2 md:order-1'>
-                <Sidebar />
-              </div>
-              <div className='bg-yellow-300 w-full md:ml-[70px] mt-[60px] md:order-2 h-[1800px]'>
-                {children}
-              </div>
-            </div>
-          </div>
-        </div>
-      </body>
-    </html>
-  );
+   return (
+     <html lang='en'>
+       <body className='relative lg:mx-auto max-w-[1920px]'>
+         <div className='bg-green-500 fixed w-full h-[60px] max-w-[1920px] '>
+           <div className='py-12 grid grid-cols-12 '>
+             <div className='col-span-5'>
+               <Image className='py' src={logo} alt='logo' />
+             </div>
+             <div className='col-span-2'>
+               <Image className='py' src={logo} alt='logo' />
+             </div>
+             <div className='col-span-5'>
+               <Image className='py' src={logo} alt='logo' />
+             </div>
+           </div>
+         </div>
+
+         <div className='flex flex-col md:flex-row'>
+           <div className='fixed bottom-0 md:bottom-auto w-full md:w-[70px] md:mt-[60px] order-2 md:order-1'>
+             <Sidebar />
+           </div>
+           <div className='bg-yellow-300 w-full md:ml-[70px] mt-[60px] md:order-2 h-[1900px]'>
+             {children}
+           </div>
+         </div>
+       </body>
+     </html>
+   );
 }

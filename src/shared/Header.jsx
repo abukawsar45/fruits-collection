@@ -4,19 +4,17 @@ import Image from 'next/image';
 
 const Header = () => {
   return (
-    <div className=' flex flex-row justify-center max-w-[1920px] '>
-      <div className='basis-2/5 bg-red-400'>
-        {/* <Image width={72} height={36} src={logo} alt='logo' /> */}
-        <p>asdf</p>
+    <div className='w-full h-[60px] grid  grid-cols-12 max-w-[1920px] '>
+      <div className='grid-cols-5'>
+        <Image width={72} height={36} src={logo} alt='logo' />
       </div>
-      <div className='basis-1/5 bg-red-600'>
-        {/* <Image width={72} height={36} src={logo} alt='logo' /> */}
-        <p>asdfaf</p>
+      <div className='grid-cols-2'>
+        <Image width={72} height={36} src={logo} alt='logo' />
       </div>
-      <div className='basis-2/5 bg-red-800'>
-        {/* <Image width={72} height={36} src={logo} alt='logo' /> */}
-        <p>asdfa</p>
+      <div className='grid-cols-5'>
+        <Image width={72} height={36} src={logo} alt='logo' />
       </div>
+      
     </div>
   );
 };

@@ -3,11 +3,11 @@ import { BiHomeSmile } from 'react-icons/bi';
 import { LuLayoutGrid } from 'react-icons/lu';
 import { PiTelegramLogoLight } from 'react-icons/pi';
 import { CgMoreO, CgPlayButtonR } from 'react-icons/cg';
-import ActiveLink from '../app/utils/ActiveLink';
+import ActiveLink from '@/app/utils/ActiveLink';
 
 const Sidebar = () => {
   return (
-    <div className='md:h-screen mx-auto  top-0 flex justify-center md:justify-start items-center border-amber-500  '>
+    <div className='mx-auto py-10 md:py-auto h-[56px] md:h-screen md:overflow-scroll lg:overflow-hidden top-0 flex justify-center  md:items-center border-amber-500 bottom-0 md:bottom-auto  '>
       <div className='flex justify-center md:flex-col md:items-center gap-5 py-5'>
         <ActiveLink
           href='/'
