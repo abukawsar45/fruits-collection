@@ -14,7 +14,7 @@ export default function RootLayout({ children }) {
    return (
      <html lang='en'>
        <body className='relative lg:mx-auto max-w-[1920px]'>
-         <div className='fixed h-[60px] w-full max-w-[1920px] '>
+         <div className='fixed h-14 md:h-[60px] w-full max-w-[1920px] '>
          <Header/>
          </div>
 
