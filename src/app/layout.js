@@ -22,9 +22,7 @@ export default function RootLayout({ children }) {
            <div className='fixed bottom-0 md:bottom-auto w-full md:w-[70px] md:mt-[60px] order-2 md:order-1'>
              <Sidebar />
            </div>
-           <div
-             className='bg-[#EEF0F2] w-full md:ml-[70px] mt-[60px] md:order-2 h-[1900px] lg:rounded-tl-3xl'
-           >
+           <div className='bg-[#EEF0F2] w-full md:ml-[70px] mt-[60px] mb-14 md:mb-0 md:order-2 lg:rounded-tl-3xl'>
              {children}
            </div>
          </div>

@@ -7,37 +7,37 @@ import ActiveLink from './ActiveLink';
 
 const Sidebar = () => {
   return (
-    <nav className='mx-auto md:py-auto md:h-screen md:overflow-scroll lg:overflow-hidden top-0 flex justify-center  md:items-center border-amber-500 bottom-0 md:bottom-auto  '>
-      <div className='flex justify-center md:flex-col md:items-center gap-5 py-5'>
+    <nav className='mx-auto md:py-auto h-14 md:h-screen md:overflow-scroll lg:overflow-hidden top-0 flex justify-center  md:items-center border-amber-500 bottom-0 md:bottom-auto py-2.5'>
+      <div className='flex justify-center md:flex-col md:items-center gap-5'>
         <ActiveLink
           href='/'
-          className='p-3  rounded-md group cursor-pointer  hover:transition-all hover:border-2 ease-in hover:ease-in hover:border-sky-200'
+          className=' rounded-md group cursor-pointer  hover:transition-all hover:border-2 ease-in hover:ease-in hover:border-sky-200'
         >
-          <BiHomeSmile className='text-2xl group-hover:text-blue-500' />
+          <BiHomeSmile className='text-4xl p-2 group-hover:text-blue-500' />
         </ActiveLink>
         <ActiveLink
           href='/menu'
-          className='p-3 rounded-md group cursor-pointer  hover:transition-all hover:border-2 ease-in hover:ease-in hover:border-sky-200'
+          className='rounded-md group cursor-pointer  hover:transition-all hover:border-2 ease-in hover:ease-in hover:border-sky-200'
         >
-          <LuLayoutGrid className='text-2xl group-hover:text-blue-500' />
+          <LuLayoutGrid className='text-4xl p-2 group-hover:text-blue-500' />
         </ActiveLink>
         <ActiveLink
           href='/message'
-          className='p-3 rounded-md group cursor-pointer  hover:transition-all hover:border-2 ease-in hover:ease-in hover:border-sky-200'
+          className='rounded-md group cursor-pointer  hover:transition-all hover:border-2 ease-in hover:ease-in hover:border-sky-200'
         >
-          <PiTelegramLogoLight className='text-2xl group-hover:text-blue-500 ' />
+          <PiTelegramLogoLight className='text-4xl p-2 group-hover:text-blue-500 ' />
         </ActiveLink>
         <ActiveLink
           href='/video'
-          className='p-3 rounded-md group cursor-pointer  hover:transition-all hover:border-2 ease-in hover:ease-in hover:border-sky-200'
+          className='rounded-md group cursor-pointer  hover:transition-all hover:border-2 ease-in hover:ease-in hover:border-sky-200'
         >
-          <CgPlayButtonR className='text-2xl group-hover:text-blue-500 ' />
+          <CgPlayButtonR className='text-4xl p-2 group-hover:text-blue-500 ' />
         </ActiveLink>
         <ActiveLink
           href='/more'
-          className='p-3 rounded-md group cursor-pointer  hover:transition-all hover:border-2 ease-in hover:ease-in hover:border-sky-200'
+          className='rounded-md group cursor-pointer  hover:transition-all hover:border-2 ease-in hover:ease-in hover:border-sky-200'
         >
-          <CgMoreO className='text-2xl group-hover:text-blue-500 ' />
+          <CgMoreO className='text-4xl p-2 group-hover:text-blue-500 ' />
         </ActiveLink>
       </div>
     </nav>

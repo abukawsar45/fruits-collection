@@ -210,7 +210,7 @@ export default function Home() {
               </div>
             </>
           ) : (
-            <div className='flex items-center'>
+            <div className='flex justify-center items-center'>
               <p className='py-5' > Vegitables data comming soon </p>
             </div>
           )}
@@ -442,7 +442,7 @@ export default function Home() {
                       </div>
                     </>
                   ) : (
-                    <div className='flex items-center'>
+                    <div className='flex justify-center items-center'>
                       <p className='py-5' > Vegitables data comming soon </p>
                     </div>
                   )}
