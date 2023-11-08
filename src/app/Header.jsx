@@ -80,7 +80,7 @@ const Header = () => {
       </div>
       <div className='col-span-1 md:col-span-5 '>
         <div className='hidden md:block'>{navData}</div>
-        <div className=' md:hidden flex flex-col justify-end items-center gap-4'>
+        <div className=' md:hidden flex flex-col justify-end items-center gap-4 relative'>
           <button
             className={`h-8  p-[6px] transition-transform duration-100 border  rounded-lg ${
               isShowMenu
@@ -105,8 +105,8 @@ const Header = () => {
           </button>
           {
             <div
-              className={`transition-all  ${
-                isShowMenu ? 'duration-300 ml-0' : 'duration-300 ml-40'
+              className={`absolute transition-all  ${
+                isShowMenu ? 'duration-300 top-16 ' : 'duration-300 -top-40 '
               }`}
             >
               {navData}
