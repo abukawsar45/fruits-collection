@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
              <Sidebar />
            </div>
            <div
-             className='bg-[#EEF0F2] w-full md:ml-[70px] mt-[60px] md:order-2 h-[1900px] rounded-tl-3xl'
+             className='bg-[#EEF0F2] w-full md:ml-[70px] mt-[60px] md:order-2 h-[1900px] lg:rounded-tl-3xl'
            >
              {children}
            </div>

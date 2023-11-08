@@ -8,6 +8,7 @@ import { PiSquaresFourBold } from 'react-icons/pi';
 import orange from '../assets/orange.png';
 import apple from '../assets/apple.png';
 import avocado from '../assets/avocado.png';
+import HomePageContent from './HomePageContent';
 
 export default function Home() {
   const [isFruitCategory, setIsFruitCategory] = useState('fruits');
@@ -34,14 +35,13 @@ export default function Home() {
 
   return (
     <main
-      className={` grid grid-cols-12 m-4 ${
-        isOpenFoodList ? '' : ''
-      } `}
+      className={` grid grid-cols-12 gap-4 m-4  ${isOpenFoodList ? '' : ''} `}
     >
       <div
-        className='col-span-12 lg:col-span-2 bg-white px-4 py-2.5 lg:py-4 rounded-2xl flex flex-col gap-4'
+        className='col-span-12 lg:col-span-2 bg-white px-3 md:px-4 py-2.5 lg:py-4 rounded-lg md:rounded-2xl  flex flex-col gap-4'
         ref={foodListRef}
       >
+        {/* fruits list for large device */}
         <div className='hidden lg:block'>
           {/* fruits category button */}
           <div className='flex items-center p-1 gap-x-2.5 border-2 border-orange-100 rounded-lg'>
@@ -63,13 +63,13 @@ export default function Home() {
           {/* search bar */}
           {isFruitCategory === 'fruits' ? (
             <>
-              <div className='relative flex justify-between items-center'>
+              <div className='relative flex justify-between items-center py-4'>
                 <input
                   type='text'
                   placeholder='Search by Fruits Name'
                   className='  rounded-lg h-8 md:h-10  px-4 text-black  border-2 border-slate-100 hover:border-green-400 hover:transition w-full'
                 />
-                <button className='absolute right-0 active-button border-1 border-red-100 rounded-md m-1 px-1.5 py-1'>
+                <button className='absolute right-0 active-button border-1 border-red-100 rounded-md m-1 px-1.5 py-1 '>
                   <GoSearch className='text-2xl rounded ' />
                 </button>
               </div>
@@ -210,15 +210,13 @@ export default function Home() {
               </div>
             </>
           ) : (
-            <div className='flex justify-center items-center'>
-              <p> Vegitables data comming soon </p>
+            <div className='flex items-center'>
+              <p className='py-5' > Vegitables data comming soon </p>
             </div>
           )}
         </div>
         {/* medium or small device */}
-        <div
-          className={`block lg:hidden ${isOpenFoodList ? '' : ''}`}
-        >
+        <div className={`block lg:hidden ${isOpenFoodList ? '' : ''}`}>
           <div className='grid grid-cols-12'>
             <div className='col-span-12'>
               {' '}
@@ -266,8 +264,8 @@ export default function Home() {
                           placeholder='Search by Fruits Name'
                           className='  rounded-lg h-8 md:h-10 px-4 text-black  border-2 border-slate-100 hover:border-green-400 hover:transition w-full'
                         />
-                        <button className='absolute right-0 active-button border-1 border-red-100 rounded-md m-1 px-1.5 py-0.5'>
-                          <GoSearch className='text-xl rounded ' />
+                        <button className='absolute right-0 active-button border-1 border-red-100 rounded-md m-1 px-1.5 py-1'>
+                          <GoSearch className='text-lg rounded ' />
                         </button>
                       </div>
                       {/* fruits list */}
@@ -294,7 +292,10 @@ export default function Home() {
                           </div>
 
                           {/* apple */}
-                          <div onClick={() => setIsOpenFoodList(false)} className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'>
+                          <div
+                            onClick={() => setIsOpenFoodList(false)}
+                            className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'
+                          >
                             <div className='flex items-center bg-orange-200 w-10 h-10 rounded-xl my-2 -rotate-45'>
                               <Image
                                 width={42}
@@ -312,7 +313,10 @@ export default function Home() {
                             </div>
                           </div>
                           {/* avocado */}
-                          <div onClick={() => setIsOpenFoodList(false)} className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'>
+                          <div
+                            onClick={() => setIsOpenFoodList(false)}
+                            className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'
+                          >
                             <div className='flex items-center bg-orange-200 w-10 h-10 rounded-xl my-2 -rotate-45'>
                               <Image
                                 width={42}
@@ -330,7 +334,10 @@ export default function Home() {
                             </div>
                           </div>
                           {/* strawberries */}
-                          <div onClick={() => setIsOpenFoodList(false)} className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'>
+                          <div
+                            onClick={() => setIsOpenFoodList(false)}
+                            className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'
+                          >
                             <div className='flex items-center bg-orange-200 w-10 h-10 rounded-xl my-2 -rotate-45'>
                               <Image
                                 width={42}
@@ -348,7 +355,10 @@ export default function Home() {
                             </div>
                           </div>
                           {/* mangoes */}
-                          <div onClick={() => setIsOpenFoodList(false)} className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'>
+                          <div
+                            onClick={() => setIsOpenFoodList(false)}
+                            className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'
+                          >
                             <div className='flex items-center bg-orange-200 w-10 h-10 rounded-xl my-2 -rotate-45'>
                               <Image
                                 width={42}
@@ -366,7 +376,10 @@ export default function Home() {
                             </div>
                           </div>
                           {/* blueverries */}
-                          <div onClick={() => setIsOpenFoodList(false)} className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'>
+                          <div
+                            onClick={() => setIsOpenFoodList(false)}
+                            className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'
+                          >
                             <div className='flex items-center bg-orange-200 w-10 h-10 rounded-xl my-2 -rotate-45'>
                               <Image
                                 width={42}
@@ -384,7 +397,10 @@ export default function Home() {
                             </div>
                           </div>
                           {/* grapes */}
-                          <div onClick={() => setIsOpenFoodList(false)} className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'>
+                          <div
+                            onClick={() => setIsOpenFoodList(false)}
+                            className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'
+                          >
                             <div className='flex items-center bg-orange-200 w-10 h-10 rounded-xl my-2 -rotate-45'>
                               <Image
                                 width={42}
@@ -402,7 +418,10 @@ export default function Home() {
                             </div>
                           </div>
                           {/* papayas */}
-                          <div onClick={() => setIsOpenFoodList(false)} className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'>
+                          <div
+                            onClick={() => setIsOpenFoodList(false)}
+                            className='flex items-center cursor-pointer hover:border-s-2 hover:border-blue-400 rounded-lg px-2.5 py-2 gap-4'
+                          >
                             <div className='flex items-center bg-orange-200 w-10 h-10 rounded-xl my-2 -rotate-45'>
                               <Image
                                 width={42}
@@ -423,8 +442,8 @@ export default function Home() {
                       </div>
                     </>
                   ) : (
-                    <div className='flex justify-center items-center'>
-                      <p> Vegitables data comming soon </p>
+                    <div className='flex items-center'>
+                      <p className='py-5' > Vegitables data comming soon </p>
                     </div>
                   )}
                 </div>
@@ -434,7 +453,9 @@ export default function Home() {
         </div>
       </div>
       {/* mid part */}
-      <div className='col-span-8'></div>
+      <div className='w-full col-span-12 lg:col-span-8 bg-white px-3 md:px-4 py-3.5 md:py-5 lg:p-11 rounded-lg md:rounded-2xl '>
+        <HomePageContent />
+      </div>
       <div className='col-span-2'>adsf</div>
     </main>
   );
