@@ -2,7 +2,7 @@
 
 
 import Link from 'next/link';
-import React from 'react';
+import React, { useState } from 'react';
 import { Rating } from '@smastrom/react-rating';
 import '@smastrom/react-rating/style.css';
 import {
@@ -114,9 +114,10 @@ const HomePageContent = () => {
           />
         </div>
         <div className='mt-16'>
-        <p className='text-lg font-black'>Health benefits of an avocado</p>
-          <Rating className='mt-2.5'
-            style={{ maxWidth: 250 }}
+          <p className='text-lg font-black'>Was this helpful?</p>
+          <Rating
+            className='mt-2.5'
+            style={{ maxWidth: 180 }}
             value={rating}
             onChange={setRating}
           />
