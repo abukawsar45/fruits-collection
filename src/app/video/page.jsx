@@ -27,27 +27,17 @@ const Video = () => {
     setIntervalId(id);
   };
 
-  const stopColorChange = () => {
-    if (intervalId) {
-      clearInterval(intervalId);
-      setIntervalId(null);
-    }
-  };
 
   useEffect(() => {
     startColorChange();
 
-    return () => {
-      stopColorChange();
-    };
   }, []); 
 
   return (
     <div className='my-2 md:my-12 mx-2 md:mx-12 z-0 bg-white  pb-20'>
       <div className='md:text-center mb-4'>
         <p className='pt-2 md:pt-5 lg:pt-7'>
-          The colors will change automatically every 3 seconds. Click the Stop
-          button to turn off automatic color change
+          The colors will change automatically every 3 seconds.
         </p>
         <div className='mt-2 md:mt-3 lg:mt-5 flex justify-center items-center space-x-4'>
           <button
@@ -56,15 +46,10 @@ const Video = () => {
           >
             Change Color
           </button>
-          <button
-            className='px-3 py-1 text-white hover:text-black bg-red-500 hover:bg-red-600 rounded-lg font-bold'
-            onClick={stopColorChange}
-          >
-            Stop
-          </button>
+        
         </div>
       </div>
-      <div className='mt-3 md:mt-6 lg:mt-10 flex justify-center'>
+      <div className='mt-3 md:mt-4 lg:mt-6 flex justify-center'>
         <div
           className='w-80 md:w-[600px] lg:w-[1000px] h-56 md:h-[400px] lg:h-[600px] relative flex justify-center items-center rounded-md md:rounded-lg'
           style={{ background: backgroundColor }}
