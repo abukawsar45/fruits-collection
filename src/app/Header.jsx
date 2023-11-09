@@ -15,7 +15,7 @@ const Header = () => {
   const [isOpenMenu, setIsOpenMenu] = useState(false);
   const [isShowMenu, setIsShowMenu] = useState(false);
 
-  console.log({isDarkToggled, isSwitchToggled, isOpenMenu, isShowMenu})
+  // console.log({isDarkToggled, isSwitchToggled, isOpenMenu, isShowMenu})
 
   const navData = (
     <>
@@ -63,7 +63,7 @@ const Header = () => {
   );
 
   return (
-    <div className='px-1 md:px-2 lg:px-6 py-[10px] md:py-3 grid grid-cols-12 gap-2 '>
+    <div className='px-1 md:px-2 lg:px-6 py-[10px] md:py-3 grid grid-cols-12 gap-2 z-50 '>
       <div className='col-span-6 md:col-span-5'>
         <Link href='/'>
         <Image className='h-8 md:h-9' src={logo} alt='logo' />

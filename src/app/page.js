@@ -20,7 +20,7 @@ export default function Home() {
   const foodListRef = useRef(null);
 
    const myCustomStyle = {
-     fontSize: 19,
+     
    };
 
    useEffect(() => {

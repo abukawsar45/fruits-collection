@@ -15,7 +15,7 @@ const Setting = ({ myStyleStore, setMyStyleStore }) => {
     setIsChecked(!isChecked);
   };
 
-  console.log({ isOpenSetting });
+  // console.log({ isOpenSetting });
   return (
     <div className='hidden md:block px-3 md:px-4 py-2.5 lg:py-4 bg-white rounded-lg md:rounded-2xl '>
       <div className=' py border-2 p-2.5 border-slate-300 rounded-lg'>
@@ -48,7 +48,7 @@ const Setting = ({ myStyleStore, setMyStyleStore }) => {
             <div className='flex  justify-between items-center'>
               <p className='font-medium text-sm'>Paragraph font size</p>
               <p className='text-xs font-semibold text-red-500'>
-                {myStyleStore?.fontSize || 19}
+                {myStyleStore?.fontSize || 14}
               </p>
             </div>
             <div className='w-full'>
@@ -60,7 +60,7 @@ const Setting = ({ myStyleStore, setMyStyleStore }) => {
                 style={{
                   '--range-color': '#E55527',
                 }}
-                value={parseFloat(myStyleStore?.fontSize || 19)}
+                defaultValue={parseFloat(myStyleStore?.fontSize || 14)}
                 onChange={(e) =>
                   setMyStyleStore({
                     ...myStyleStore,
