@@ -84,14 +84,7 @@ const Setting = () => {
               <IoIosArrowDown className='text-sm' />
             </button>
           </div>
-          <div className='mt-5'>
-            <button className=' w-full flex justify-between items-center text-sm font-medium py-1.5 '>
-              <span className='font-medium text-sm'>Turn Off Subtitle</span>
-
-              <LiaToggleOffSolid className='text-lg' />
-              <IoToggle className='text-lg' />
-            </button>
-          </div>
+       
         </div>
       )}
     </div>
