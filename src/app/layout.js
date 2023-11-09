@@ -11,6 +11,7 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  
    return (
      <html lang='en'>
        <body className='relative lg:mx-auto max-w-[1920px]'>

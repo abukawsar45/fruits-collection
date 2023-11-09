@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 
-const SimplePage = () => {
+const Video = () => {
   const [backgroundColor, setBackgroundColor] = useState('#29e31c');
   const [centerColor, setCenterColor] = useState('#e91616');
   const [intervalId, setIntervalId] = useState(null);
@@ -79,4 +79,4 @@ const SimplePage = () => {
   );
 };
 
-export default SimplePage;
+export default Video;
