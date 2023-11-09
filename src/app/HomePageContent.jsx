@@ -16,9 +16,8 @@ import Image from 'next/image';
 import avocadoImage from '../assets/avocado-sideImage.png';
 import appleImage from '../assets/apple-image.png';
 
-const HomePageContent = () => {
-  const [rating, setRating] = useState(4); 
-  
+const HomePageContent = ({ myStyleStore }) => {
+  const [rating, setRating] = useState(4);
 
   return (
     <div className='flex flex-col md:flex-row w-full md:gap-3 lg:gap-10 '>
@@ -62,7 +61,7 @@ const HomePageContent = () => {
               <p className=' font-bold text-sm md:text-lg'>
                 Supports eye health:{' '}
               </p>
-              <p className='mt-2.5 md:mt-[15px] text-xs md:text-sm'>
+              <p style={myStyleStore} className='mt-2.5 md:mt-[15px] text-xs md:text-sm'>
                 Spinach contains high levels of vitamin A and other antioxidants
                 that help maintain healthy vision and protect against
                 age-related macular degeneration.
@@ -72,7 +71,7 @@ const HomePageContent = () => {
               <p className=' font-bold text-sm md:text-lg'>
                 Supports eye health:{' '}
               </p>
-              <p className='mt-2.5 md:mt-[15px] text-xs md:text-sm'>
+              <p style={myStyleStore} className='mt-2.5 md:mt-[15px] text-xs md:text-sm'>
                 Spinach contains high levels of vitamin A and other antioxidants
                 that help maintain healthy vision and protect against
                 age-related macular degeneration.
@@ -89,7 +88,7 @@ const HomePageContent = () => {
         </div>
         <div className=' mt-6 md:mt-10'>
           <p className=' font-bold text-sm md:text-lg'>Supports eye health: </p>
-          <p className='mt-2.5 md:mt-[15px] text-xs md:text-sm'>
+          <p style={myStyleStore} className='mt-2.5 md:mt-[15px] text-xs md:text-sm'>
             Spinach contains high levels of vitamin A and other antioxidants
             that help maintain healthy vision and protect against age-related
             macular degeneration.. Spinach contains high levels of vitamin A and
@@ -119,8 +118,10 @@ const HomePageContent = () => {
               />
             </div>
             <div className='w-full md:basis-2/4 mt-6 md:mt-0'>
-              <p className=' font-bold text-sm md:text-lg'>Supports eye health: </p>
-              <p className='mt-2.5 md:mt-[15px] text-xs md:text-sm'>
+              <p className=' font-bold text-sm md:text-lg'>
+                Supports eye health:{' '}
+              </p>
+              <p style={myStyleStore} className='mt-2.5 md:mt-[15px] text-xs md:text-sm'>
                 Spinach contains high levels of vitamin A and other antioxidants
                 that help maintain healthy vision and protect against
                 age-related macular degeneration.. Spinach contains high levels

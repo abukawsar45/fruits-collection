@@ -43,9 +43,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main
-      className='grid grid-cols-12 gap-4 m-4 '
-    >
+    <main className='grid grid-cols-12 gap-4 m-4 '>
       <div
         className='col-span-12 lg:col-span-2 bg-white px-3 md:px-4 py-2.5 lg:py-4 rounded-lg md:rounded-2xl  flex flex-col gap-4'
         ref={foodListRef}
@@ -266,9 +264,14 @@ export default function Home() {
       </div>
       {/* mid part */}
       <div className='w-full col-span-12 lg:col-span-8 bg-white px-3 md:px-4 py-3.5 md:py-5 lg:p-11 rounded-lg md:rounded-2xl '>
-        <HomePageContent />
+        <HomePageContent  myStyleStore={myStyleStore} />
       </div>
-      <div className='col-span-2'><SettingPage myStyleStore={myStyleStore} setMyStyleStore={setMyStyleStore} /> </div>
+      <div className='hidden md:block md:col-span-12 lg:col-span-2'>
+        <SettingPage
+          myStyleStore={myStyleStore}
+          setMyStyleStore={setMyStyleStore}
+        />{' '}
+      </div>
     </main>
   );
 }
