@@ -7,6 +7,7 @@ import { GoSearch } from 'react-icons/go';
 import { BsFillSunFill, BsMoon } from 'react-icons/bs';
 import { SiNintendoswitch } from 'react-icons/si';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
+import Link from 'next/link';
 
 const Header = () => {
   const [isDarkToggled, setIsDarkToggled] = useState(false);
@@ -64,7 +65,9 @@ const Header = () => {
   return (
     <div className='px-1 md:px-2 lg:px-6 py-[10px] md:py-3 grid grid-cols-12 gap-2 '>
       <div className='col-span-6 md:col-span-5'>
+        <Link href='/'>
         <Image className='h-8 md:h-9' src={logo} alt='logo' />
+        </Link>
       </div>
       <div className='col-span-5 md:col-span-2'>
         <div className='relative flex justify-between items-center'>

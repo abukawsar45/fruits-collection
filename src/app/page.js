@@ -43,7 +43,7 @@ export default function Home() {
   }, []);
 
   return (
-    <main className='grid grid-cols-12 gap-4 m-4 '>
+    <main className='grid grid-cols-12 gap-4 mx-2 md:m-4 '>
       <div
         className='col-span-12 lg:col-span-2 bg-white px-3 md:px-4 py-2.5 lg:py-4 rounded-lg md:rounded-2xl  flex flex-col gap-4'
         ref={foodListRef}
